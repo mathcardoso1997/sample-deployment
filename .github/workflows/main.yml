@@ -51,5 +51,5 @@ jobs:
       with:
         app-name: 'aula-cd-pedrolacerda'
         slot-name: 'production'
-        publish-profile: ${{ AZUREAPPSERVICE_PUBLISHPROFILE_478A31C4FB9040B795B037BAA5CEDBF1 }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_478A31C4FB9040B795B037BAA5CEDBF1 }}
         package: .
