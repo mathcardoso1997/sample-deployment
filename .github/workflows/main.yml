@@ -56,7 +56,7 @@ jobs:
         
   deploy-to-hom:
     runs-on: ubuntu-latest
-    needs: build
+    needs: deploy-to-qa
     environment:
       name: 'HOM'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
@@ -78,7 +78,7 @@ jobs:
         
   deploy-to-production:
     runs-on: ubuntu-latest
-    needs: build
+    needs: deploy-to-hom
     environment:
       name: 'production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
