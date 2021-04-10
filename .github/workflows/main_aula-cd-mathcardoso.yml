@@ -55,7 +55,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.app-name }}
-        slot-name: 'qa'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: .
   
@@ -77,7 +76,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.app-name }}
-        slot-name: 'hom'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: .
 
@@ -99,6 +97,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.app-name }}
-        slot-name: 'production'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_416DB125660744ED89404D43ADE21B2D }}
         package: .
